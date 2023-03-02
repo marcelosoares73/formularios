@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/*
+   Paleta de cores:
+   verde: #49a09d
+   lilás: #5f2c82
+ */
+
+ * {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body, html {
+   background-color: #5f2c82;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ main {
+   position: relative;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ section#login {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   background-color: #ffffff;
+   width: 250px;
+   height: 500px;
+   border-radius: 15px;
+   overflow: hidden;
+   transition: width .2s, height .2s;
+   transition-timing-function: ease;
+   box-shadow: 0px 0px 10px #00000083;
+   transform: translate(-50%, -50%);
+ }
+
+ div#imagem {
+   background: #5f2c82 url('../imagens/pexels-dinnow.jpg') no-repeat;
+   height: 150px;
+   display: block;
+   background-size: cover;
+   background-position: center center;
+ }
+
+ div#formulario {
+   display: block;
+   padding: 10px;
+ }
+
+div#formulario > h1 {
+   text-align: center;
+   margin-top: 10px;
+}
+
+div#formulario > p {
+   margin-top: 10px;
+   font-size: 0.8em;
+}
+
+form > div.campo {
+   background-color: #5f2c82;
+   height: 40px;
+   border: 2px solid #5f2c82;
+   border-radius: 8px;
+   margin: 5px 0px;
+}
+
+div.campo > i {
+   color: #ffffff;
+   font-size: 2em;
+   width: 40px;
+   padding: 5px;
+}
+
+div.campo > input {
+   background-color: #a7dac6;
+   font-size: 1em;
+   width: calc(100% - 45px);
+   height: 100%;
+   border: 0px;
+   border-radius: 8px;
+   padding: 4px;
+   transform: translateY(-13px);
+}
+
+div.campo > input:focus-within {
+   background-color: #ffffff;
+   outline: none;
+}
+
+form label {
+   display: none;
+}
+
+form > input[type=submit] {
+   display: block;
+   font-size: 1em;
+   width: 100%;
+   height: 40px;
+   background-color: #00804f;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+   background-color: #046241;
+}
+
+form > a.botao {
+   text-align: center;
+   display: block;
+   width: 100%;
+   font-size: 1em;
+   height: 30px;
+   text-decoration: none;
+   margin-top: 8px;
+   padding-top: 7.5px;
+   color: #00804f;
+}
+
+form > a.botao:hover {
+   font-size: 1em;
+   display: block;
+   color: #02422a;
+   border: none;
+   border-radius: 5px;
+   background: #a3e2ca;
+   height: 40px;
+   width: 100%;
+}

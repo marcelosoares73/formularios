@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <main>
+        <section class="formulario">
+            <h1>Preencha seus dados</h1>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <div>
+                    <label for="i-nome">Primeiro Nome</label> <br>
+                    <input type="text" name="primeiro-nome" id="i-nome" autocomplete="name" required>
+                </div>
+
+                <div>
+                    <label for="i-sobrenome">Sobrenome</label> <br>
+                    <input type="text" name="sobrenome" id="i-sobrenome" autocomplete="nickname" required>
+                </div>
+
+                <div>
+                    <label for="i-nascimento">Data de Nascimento</label> <br>
+                    <input type="date" name="data-nascimento" id="i-nascimento" required>
+                </div>
+
+                <div>
+                    <label for="i-cpf">CPF</label> <br>
+                    <input type="number" name="cpf" id="i-cpf" placeholder="123.456.789-10">
+                </div>
+
+                <div>
+                    <label for="i-mail">E-mail</label> <br>
+                    <input type="email" name="email" id="i-mail" required autocomplete="email" placeholder="exemplo@gmail.com">
+                </div>
+
+                <div>
+                    <label for="i-tel">Celular</label> <br>
+                    <input type="tel" name="telefone" id="i-tel" required autocomplete="tel" placeholder="99 99999-9999">
+                </div>
+
+                <div id="senha">
+                    <label for="i-senha">Criar senha</label> <br>
+                    <input type="password" name="senha" id="i-senha" required placeholder="Deve conter no mínimo 8 caracteres" minlength="8" maxlength="16">
+                    <img src="icones/eye.svg" alt="eye" id="image">
+                </div>
+
+                <div>
+                    <input type="submit" value="Enviar Dados">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

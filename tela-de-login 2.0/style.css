@@ -1,0 +1,211 @@
+/* Typical Device Breakpoints
+    -------------------------
+    Pequenas telas: até 600px
+    Celulares: 600px até 768px
+    Tablets: 768px até 992px
+    Desktop: 992px até 1200px
+    Grnades telas: acima de 1200px
+*/
+
+/* Versão Mobile First */
+
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Modern Sans';
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #a3ecca;
+    --color2: #c6a1f0;
+    --color3: #a17aeb;
+    --color4: #ffffff;
+    --color5: #000000;
+}
+
+@font-face {
+    font-family: 'Cafe';
+    src: url('./fontes/Louis\ George\ Cafe\ Bold.ttf');
+}
+
+@font-face {
+    /* fonte padrão */
+    font-family: 'Modern Sans';
+    src: url('./fontes/Quicksand_Book.otf') format('opentype');
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+main {
+    position: relative;
+    background-image: linear-gradient(15deg, var(--color2), var(--color1));
+    width: 310px;
+    height: 400px;
+    border-radius: 8px;
+    font-size: 1.3em;
+}
+
+div.area_head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+form > div > h1 {
+    font-family: 'Cafe';
+    margin-bottom: 20px;
+    color: var(--color5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.308);
+}
+
+form > div > p {
+    font-size: 0.9em;
+    font-family: 'Cafe';
+}
+
+form > div > p > a {
+    text-decoration: none;
+    font-family: 'Cafe';
+    font-size: 0.9em;
+    color: #190b91;
+}
+
+form > div > p > a:hover {
+    text-decoration: underline;
+    color: #7a1e4c;
+}
+
+section.formulario {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type=email], input[type=password] {
+    font-family: 'Cafe';
+    width: 100%;
+    height: 30px;
+    outline: none;
+    font-size: 0.7em;
+    margin: 5px 0px;
+    text-indent: 4px;
+    background-color: var(--color4);
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    border-radius: 5px;
+}
+
+div.campo {
+    position: relative;
+    margin-top: 15px;
+}
+
+div.campo label {
+    color: var(--color5);
+    font-family: 'Cafe';
+    font-size: 0.9em;
+    position: absolute;
+    text-indent: 2px;
+    left: 3px;
+    top: 9px;
+    cursor: text;
+    transition: 0.4s ease-in-out;
+}
+
+div.campo .inp:focus ~ label,
+div.campo .inp:valid ~ label {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    color: var(--color5);
+}
+
+input[type=submit] {
+    font-family: 'Cafe';
+    font-size: 1em;
+    font-weight: normal;
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #190b91;
+    color: var(--color4);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(11, 92, 184);
+    color: var(--color4);
+}  
+
+input[type=submit]:active {
+    background-color: #100853;
+}
+
+div.links {
+    text-align: left;
+    text-indent: 2px;
+    font-size: 1em;
+}
+
+a.link_1 {
+    font-family: 'Cafe';
+    text-decoration: none;
+    color: #7a1e4c;
+    font-size: 0.8em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+a.link_1:hover {
+    text-decoration: underline;
+    color: #2d1fac; 
+}
+
+a.link_1:active {
+    color: #530c30;
+}
+
+
+/* Versão para Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    main {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+
+/* Versão para Desktop */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    main {
+        width: 500px;
+        height: 350px;
+    }
+}
+
+
+/* Versão para grandes telas */
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 600px;
+        min-width: 500px;
+        height: 350px;
+    }
+}
